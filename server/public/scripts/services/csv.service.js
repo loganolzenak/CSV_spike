@@ -38,7 +38,7 @@ for (i=0; i<taco.response.length; i++){
   self.csvString += taco.response[i].charity_id + ',';
   self.csvString += taco.response[i].user_id + ',';
   self.csvString += taco.response[i].amount + ',';
-  self.csvString += taco.response[i].date_posted + '\n';
+  self.csvString += taco.response[i].date_posted.substring(0,10) + '\n';
 }
 console.log( 'creating csv with string:', self.csvString );
 self.downloadCsv( self.csvString, 'test.csv' );
